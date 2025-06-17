@@ -1,12 +1,13 @@
 ﻿using Kolokwium1poprawa.DTOs;
 using Kolokwium1poprawa.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kolokwium1poprawa.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class artifactsController
+public class artifactsController : ControllerBase
 {
     private readonly IProjectService _projectService;
 
