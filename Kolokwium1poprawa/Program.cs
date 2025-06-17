@@ -17,8 +17,10 @@ public class Program
         builder.Services.AddControllers();
         
         //Rejestrowanie zależności
-        builder.Services.AddScoped<IService, Service>();
-        builder.Services.AddScoped<IRepository, Repository>();
+        builder.Services.AddScoped<IProjectService, ProjectService>();
+        builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+        builder.Services.AddScoped<IStaffAssignmentRepository, StaffAssignmentRepository>();
+        builder.Services.AddScoped<IArtifactRepository, ArtifactRepository>();
 
         builder.Services.AddSwaggerGen(c =>
         {
